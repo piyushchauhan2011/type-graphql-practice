@@ -19,6 +19,10 @@ export class LoginResolver {
       return null;
     }
 
+    if (!user.confirmed) {
+      return null; // TODO: throw Error with proper message
+    }
+
     ctx.req.session!.userId = user.id;
 
     return user;

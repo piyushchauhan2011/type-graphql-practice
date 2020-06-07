@@ -16,10 +16,12 @@
     "express-session": "^1.17.1",
     "graphql": "^15.0.0",
     "ioredis": "^4.17.3",
+    "nodemailer": "^6.4.8",
     "pg": "^8.2.1",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.0.0-rc.2",
-    "typeorm": "^0.2.25"
+    "typeorm": "^0.2.25",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -30,6 +32,8 @@
     "@types/graphql": "^14.5.0",
     "@types/ioredis": "^4.16.4",
     "@types/node": "^14.0.11",
+    "@types/nodemailer": "^6.4.0",
+    "@types/uuid": "^8.0.0",
     "nodemon": "^2.0.4",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.44",
