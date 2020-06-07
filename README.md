@@ -17,3 +17,7 @@ yarn start
 ```
 
 Visit `http://localhost:4000/graphql`
+
+### Reference
+
+Ben Awad TypeGraphQL series [playlist](https://www.youtube.com/playlist?list=PLN3n1USn4xlma1bBu3Tloe4NyYn9Ko8Gs)
