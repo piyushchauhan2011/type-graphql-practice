@@ -18,6 +18,49 @@ yarn start
 
 Visit `http://localhost:4000/graphql`
 
+### Caveats
+
+1. Make sure in graphql-playground settings, following is set: `"request.credentials": "include"`
+
+### Available Query and Mutations
+
+*check schema docs*
+
+```graphql
+mutation {
+  register(data:{
+    firstName:"",
+    ...
+  }) {
+    id
+    firstName
+    ...
+  }
+}
+```
+
+```graphql
+mutation {
+  login(email:"", password:"") {
+    id
+    firstName
+    ...
+  }
+}
+```
+
+```graphql
+query {
+  me {
+    id
+    firstName
+    lastName
+    email
+    name
+  }
+}
+```
+
 ### Reference
 
 Ben Awad TypeGraphQL series [playlist](https://www.youtube.com/playlist?list=PLN3n1USn4xlma1bBu3Tloe4NyYn9Ko8Gs)
