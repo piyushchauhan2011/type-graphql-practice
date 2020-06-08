@@ -29,8 +29,10 @@ export class RegisterResolver {
     user.password = hashedPassword;
     await user.save();
 
-    await sendEmail(user.email, await createConfirmationUrl(user.id))
-
+    if (process.env.NODE_ENV !== "test") {
+      await sendEmail(user.email, await createConfirmationUrl(user.id));
+    }
+    
     return user;
   }
 }

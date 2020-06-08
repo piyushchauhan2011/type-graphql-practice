@@ -64,3 +64,16 @@ query {
 ### Reference
 
 Ben Awad TypeGraphQL series [playlist](https://www.youtube.com/playlist?list=PLN3n1USn4xlma1bBu3Tloe4NyYn9Ko8Gs)
+
+
+### Testing Setup
+
+```sh
+
+# locate test-utils
+
+cp ormconfig.test.example.json ormconfig.test.json # copy and modify variables
+
+yarn test
+
+```
