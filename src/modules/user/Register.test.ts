@@ -1,6 +1,6 @@
-import { testConn } from "../../../test-utils/testConn";
+import { testConn } from "../../test-utils/testConn";
 import { Connection } from "typeorm";
-import { gCall } from "../../../test-utils/gCall";
+import { gCall } from "../../test-utils/gCall";
 
 let conn: Connection;
 
