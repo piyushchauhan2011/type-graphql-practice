@@ -1,28 +1,17 @@
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server-express";
 import express from "express";
-import { buildSchema } from "type-graphql";
 import { createConnection } from "typeorm";
 import session from "express-session";
 import connectRedis from "connect-redis";
 import { redis } from "./redis";
 import cors from "cors";
+import { createSchema } from "./modules/utils/createSchema";
 
 const main = async () => {
   await createConnection();
 
-  const schema = await buildSchema({
-    resolvers: [__dirname + "/modules/**/*.ts"],
-    // resolvers: [
-    //   MeResolver,
-    //   RegisterResolver,
-    //   LoginResolver,
-    //   ConfirmUserResolver,
-    // ],
-    // authChecker: ({ context: { req } }) => {
-    //   return !!req.session.userId;
-    // },
-  });
+  const schema = await createSchema();
 
   const apolloServer = new ApolloServer({
     schema,
@@ -56,15 +45,6 @@ const main = async () => {
       },
     })
   );
-
-  // app.use(
-  //   session({
-  //     secret: "keyboard cat",
-  //     resave: false,
-  //     saveUninitialized: true,
-  //     cookie: { secure: false },
-  //   })
-  // );
 
   apolloServer.applyMiddleware({ app });
 
