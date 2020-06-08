@@ -76,4 +76,6 @@ cp ormconfig.test.example.json ormconfig.test.json # copy and modify variables
 
 yarn test
 
+yarn test:watch # watch mode - lacks resetting database
+
 ```
